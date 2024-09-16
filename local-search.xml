@@ -4,6 +4,19 @@
   
   
   <entry>
+    <title>算法基础</title>
+    <link href="/2024/09/15/%E7%AE%97%E6%B3%95%E5%9F%BA%E7%A1%80/"/>
+    <url>/2024/09/15/%E7%AE%97%E6%B3%95%E5%9F%BA%E7%A1%80/</url>
+    
+    <content type="html"><![CDATA[<p>常数操作：O(1)</p><p>给定一个数组，其中只有一种数出现了奇数次，其他都出现偶数次，怎么找到这一种数</p><p><img src="https://raw.githubusercontent.com/Wendy888888888/image/main/image-20240916154510883.png" alt="image-20240916154510883"></p><p>给定一个数组，其中只有两种数出现了奇数次，其他都出现偶数次，怎么找到这两种数</p>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>测试文章</title>
     <link href="/2024/09/14/%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0/"/>
     <url>/2024/09/14/%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0/</url>
