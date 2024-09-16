@@ -8,20 +8,7 @@
     <link href="/2024/09/15/%E7%AE%97%E6%B3%95%E5%9F%BA%E7%A1%80/"/>
     <url>/2024/09/15/%E7%AE%97%E6%B3%95%E5%9F%BA%E7%A1%80/</url>
     
-    <content type="html"><![CDATA[<p>常数操作：O(1)</p><p>给定一个数组，其中只有一种数出现了奇数次，其他都出现偶数次，怎么找到这一种数</p><p><img src="https://raw.githubusercontent.com/Wendy888888888/image/main/image-20240916154510883.png" alt="image-20240916154510883"></p><p>给定一个数组，其中只有两种数出现了奇数次，其他都出现偶数次，怎么找到这两种数</p>]]></content>
-    
-    
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>测试文章</title>
-    <link href="/2024/09/14/%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0/"/>
-    <url>/2024/09/14/%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0/</url>
-    
-    <content type="html"><![CDATA[<p>这是一个美女</p><p><img src="https://raw.githubusercontent.com/Wendy888888888/image/main/14H(V5_%25A%60%60GKM%60R8GY%60Y0D.bmp"><br>你好漂亮啊宝贝！</p><p>我爱你哦！</p><p>我很喜欢你</p>]]></content>
+    <content type="html"><![CDATA[<p>常数操作：O(1)</p><h2 id="位运算补充"><a href="#位运算补充" class="headerlink" title="位运算补充"></a>位运算补充</h2><p>1.给定一个数组，其中只有一种数出现了奇数次，其他都出现偶数次，怎么找到这一种数</p><p><img src="https://raw.githubusercontent.com/Wendy888888888/image/main/image-20240916154510883.png" alt="按位异或就是无进位相加 该图解释了异或运算与顺序无关"></p><p>eor与数组中全部的数都异或下来，出现偶数次的异或结果是0，奇数次的异或结果就是该数，代码如下：</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-type">int</span> eor=<span class="hljs-number">0</span>;<br><span class="hljs-type">int</span> arr[<span class="hljs-number">6</span>]=&#123;<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">3</span>&#125;;<br><span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i=<span class="hljs-number">0</span>;i&lt;<span class="hljs-number">7</span>;i++)&#123;<br>    eor^=arr[i];<br>&#125;<br>cout&lt;&lt;eor;<br></code></pre></td></tr></table></figure><p>2.给定一个数组，其中只有两种数出现了奇数次，其他都出现偶数次，怎么找到这两种数</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-type">int</span> eor=<span class="hljs-number">0</span>;<br><span class="hljs-type">int</span> arr[<span class="hljs-number">6</span>]=&#123;<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">3</span>&#125;;<br><span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i=<span class="hljs-number">0</span>;i&lt;<span class="hljs-number">7</span>;i++)&#123;<br>    eor^=arr[i];<br>&#125;<span class="hljs-comment">//最终eor=a^b,题目中说是两种数，因此eor！=0，即至少有一个数位是1</span><br><span class="hljs-type">int</span> rightone=eor&amp;(~eor<span class="hljs-number">+1</span>);<span class="hljs-comment">//位运算提取得到和eor同数位并保存最右边1的套路写法</span><br><br><span class="hljs-type">int</span> eor2=<span class="hljs-number">0</span>;<br><span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i=<span class="hljs-number">0</span>;i&lt;<span class="hljs-number">7</span>;i++)&#123;<br>    <span class="hljs-keyword">if</span>(arr[i]&amp;rightone==<span class="hljs-number">1</span>)&#123;<br>        eor2^=arr[i]<br>    &#125;<br>&#125;<span class="hljs-comment">//eor2找到的就是a或者b中的一个</span><br>cout&lt;&lt;eor2;<br>cout&lt;&lt;eor^eor2;<span class="hljs-comment">//就是另一个出现了奇数次的数</span><br></code></pre></td></tr></table></figure>]]></content>
     
     
     
