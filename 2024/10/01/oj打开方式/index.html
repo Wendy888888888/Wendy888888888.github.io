@@ -19,23 +19,21 @@
   <meta name="author" content="Zhiwen Huang">
   <meta name="keywords" content="">
   
-    <meta name="description" content="常数操作：O(1) 位运算补充1.给定一个数组，其中只有一种数出现了奇数次，其他都出现偶数次，怎么找到这一种数  eor与数组中全部的数都异或下来，出现偶数次的异或结果是0，奇数次的异或结果就是该数，代码如下： 123456int eor&#x3D;0;int arr[6]&#x3D;&#123;1,2,3,1,2,3,3&#125;;for (int i&#x3D;0;i&lt;7;i++)&#123;    eor^&#x3D;ar">
+    <meta name="description" content="输入输出万能头：#include &lt;bits&#x2F;stdc++.h&gt;                   1.%s 表示字符串。%c 表示字符。%lf 表示双精度浮点数 ( double )。%lld 表示长整型 ( long long )。  %llu 表示无符号长整型 ( unsigned long long )， 无符号整数不能读入负数             输入情况1：">
 <meta property="og:type" content="article">
-<meta property="og:title" content="算法基础">
-<meta property="og:url" content="http://example.com/2024/09/15/%E7%AE%97%E6%B3%95%E5%9F%BA%E7%A1%80/index.html">
+<meta property="og:title" content="Wendy&#39;s Blog">
+<meta property="og:url" content="http://example.com/2024/10/01/oj%E6%89%93%E5%BC%80%E6%96%B9%E5%BC%8F/index.html">
 <meta property="og:site_name" content="Wendy&#39;s Blog">
-<meta property="og:description" content="常数操作：O(1) 位运算补充1.给定一个数组，其中只有一种数出现了奇数次，其他都出现偶数次，怎么找到这一种数  eor与数组中全部的数都异或下来，出现偶数次的异或结果是0，奇数次的异或结果就是该数，代码如下： 123456int eor&#x3D;0;int arr[6]&#x3D;&#123;1,2,3,1,2,3,3&#125;;for (int i&#x3D;0;i&lt;7;i++)&#123;    eor^&#x3D;ar">
+<meta property="og:description" content="输入输出万能头：#include &lt;bits&#x2F;stdc++.h&gt;                   1.%s 表示字符串。%c 表示字符。%lf 表示双精度浮点数 ( double )。%lld 表示长整型 ( long long )。  %llu 表示无符号长整型 ( unsigned long long )， 无符号整数不能读入负数             输入情况1：">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://raw.githubusercontent.com/Wendy888888888/image/main/image-20240916154510883.png">
-<meta property="article:published_time" content="2024-09-15T14:33:46.000Z">
-<meta property="article:modified_time" content="2024-09-16T09:29:56.549Z">
+<meta property="article:published_time" content="2024-10-01T11:06:14.620Z">
+<meta property="article:modified_time" content="2024-10-01T14:14:56.129Z">
 <meta property="article:author" content="Zhiwen Huang">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://raw.githubusercontent.com/Wendy888888888/image/main/image-20240916154510883.png">
   
   
   
-  <title>算法基础 - Wendy&#39;s Blog</title>
+  <title>Wendy&#39;s Blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -201,7 +199,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="算法基础"></span>
+            <span id="subtitle" data-typed-text=""></span>
           
         </div>
 
@@ -212,8 +210,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-09-15 22:33" pubdate>
-          2024年9月15日 晚上
+        <time datetime="2024-10-01 19:06" pubdate>
+          2024年10月1日 晚上
         </time>
       </span>
     
@@ -224,7 +222,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          287 字
+          197 字
         
       </span>
     
@@ -235,7 +233,7 @@
         
         
         
-          3 分钟
+          2 分钟
         
       </span>
     
@@ -272,19 +270,30 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">算法基础</h1>
+            <h1 id="seo-header"></h1>
             
             
               <div class="markdown-body">
                 
-                <p>常数操作：O(1)</p>
-<h2 id="位运算补充"><a href="#位运算补充" class="headerlink" title="位运算补充"></a>位运算补充</h2><p>1.给定一个数组，其中只有一种数出现了奇数次，其他都出现偶数次，怎么找到这一种数</p>
-<p><img src="https://raw.githubusercontent.com/Wendy888888888/image/main/image-20240916154510883.png" srcset="/img/loading.gif" lazyload alt="按位异或就是无进位相加 该图解释了异或运算与顺序无关"></p>
-<p>eor与数组中全部的数都异或下来，出现偶数次的异或结果是0，奇数次的异或结果就是该数，代码如下：</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-type">int</span> eor=<span class="hljs-number">0</span>;<br><span class="hljs-type">int</span> arr[<span class="hljs-number">6</span>]=&#123;<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">3</span>&#125;;<br><span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i=<span class="hljs-number">0</span>;i&lt;<span class="hljs-number">7</span>;i++)&#123;<br>    eor^=arr[i];<br>&#125;<br>cout&lt;&lt;eor;<br></code></pre></td></tr></table></figure>
+                <h2 id="输入输出"><a href="#输入输出" class="headerlink" title="输入输出"></a>输入输出</h2><p>万能头：#include &lt;bits&#x2F;stdc++.h&gt;  </p>
+<div class="note note-success">
+            <p>   1.%s 表示字符串。</p><ol start="2"><li>%c 表示字符。</li><li>%lf 表示双精度浮点数 ( double )。</li><li>%lld 表示长整型 ( long long )。  </li><li>%llu 表示无符号长整型 ( unsigned long long )， 无符号整数不能读<br>入负数</li></ol>
+          </div>
 
-<p>2.给定一个数组，其中只有两种数出现了奇数次，其他都出现偶数次，怎么找到这两种数</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-type">int</span> eor=<span class="hljs-number">0</span>;<br><span class="hljs-type">int</span> arr[<span class="hljs-number">6</span>]=&#123;<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">3</span>&#125;;<br><span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i=<span class="hljs-number">0</span>;i&lt;<span class="hljs-number">7</span>;i++)&#123;<br>    eor^=arr[i];<br>&#125;<span class="hljs-comment">//最终eor=a^b,题目中说是两种数，因此eor！=0，即至少有一个数位是1</span><br><span class="hljs-type">int</span> rightone=eor&amp;(~eor<span class="hljs-number">+1</span>);<span class="hljs-comment">//位运算提取得到和eor同数位并保存最右边1的套路写法</span><br><br><span class="hljs-type">int</span> eor2=<span class="hljs-number">0</span>;<br><span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i=<span class="hljs-number">0</span>;i&lt;<span class="hljs-number">7</span>;i++)&#123;<br>    <span class="hljs-keyword">if</span>(arr[i]&amp;rightone==<span class="hljs-number">1</span>)&#123;<br>        eor2^=arr[i]<br>    &#125;<br>&#125;<span class="hljs-comment">//eor2找到的就是a或者b中的一个</span><br>cout&lt;&lt;eor2;<br>cout&lt;&lt;eor^eor2;<span class="hljs-comment">//就是另一个出现了奇数次的数</span><br></code></pre></td></tr></table></figure>
+<p><strong>输入情况1</strong>：若干个数字，最后一个数字是 0</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-keyword">while</span>(cin &gt;&gt; n)<br>&#123;<br><span class="hljs-keyword">if</span>(n == <span class="hljs-number">0</span>) <span class="hljs-keyword">break</span>;<span class="hljs-comment">//0的时候结束循环</span><br><span class="hljs-keyword">else</span><br>&#123;<br> 做别的操作<br>&#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p><strong>输入情况2</strong>：需要读有空格的字符串</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-built_in">getline</span>(cin,str);<br><span class="hljs-type">int</span> cnt = <span class="hljs-number">0</span>;<br><span class="hljs-type">int</span> n = str.<span class="hljs-built_in">length</span>();<br></code></pre></td></tr></table></figure>
+
+<p><strong>输入情况3</strong>：需要忽略空格</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-keyword">while</span>(cin &gt;&gt; str) &#123;<br>cout &lt;&lt; str &lt;&lt; <span class="hljs-string">&quot; &quot;</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p><em>字符串转化为数字</em></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs c++">string t;<br><span class="hljs-built_in">getline</span>(cin,t);<br><span class="hljs-type">int</span> n = <span class="hljs-built_in">stoi</span>(t);<span class="hljs-comment">//将字符串转化为数字</span><br></code></pre></td></tr></table></figure>
+
+<p><em>数字转化为字符串</em></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-type">int</span> n;<br>string t;<br>cin &gt;&gt; n;<br>t = <span class="hljs-built_in">to_string</span>(n);<br></code></pre></td></tr></table></figure>
 
 
                 
@@ -303,8 +312,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>算法基础</div>
-      <div>http://example.com/2024/09/15/算法基础/</div>
+      <div></div>
+      <div>http://example.com/2024/10/01/oj打开方式/</div>
     </div>
     <div class="license-meta">
       
@@ -316,7 +325,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2024年9月15日</div>
+          <div>2024年10月1日</div>
         </div>
       
       
@@ -348,18 +357,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2024/09/16/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" title="动态规划">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">动态规划</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2024/09/14/hello-world/" title="Hello World">
-                        <span class="hidden-mobile">Hello World</span>
+                      <a href="/2024/09/16/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" title="动态规划">
+                        <span class="hidden-mobile">动态规划</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
