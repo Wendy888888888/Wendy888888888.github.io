@@ -19,15 +19,15 @@
   <meta name="author" content="Zhiwen Huang">
   <meta name="keywords" content="">
   
-    <meta name="description" content="输入输出万能头：#include &lt;bits&#x2F;stdc++.h&gt;                1.%s 表示字符串。%c 表示字符。%lf 表示双精度浮点数 ( double )。%lld 表示长整型 ( long long )。  %llu 表示无符号长整型 ( unsigned long long )， 无符号整数不能读入负数             输入情况1：若干个">
+    <meta name="description" content="输入输出万能头：#include &lt;bits&#x2F;stdc++.h&gt;                %s 表示字符串。%c 表示字符。%lf 表示双精度浮点数 ( double )。%lld 表示长整型 ( long long )。  %llu 表示无符号长整型 ( unsigned long long )， 无符号整数不能读入负数             输入情况1：若干个数字">
 <meta property="og:type" content="article">
 <meta property="og:title" content="oj打开方式">
 <meta property="og:url" content="http://example.com/2024/10/05/oj%E6%89%93%E5%BC%80%E6%96%B9%E5%BC%8F/index.html">
 <meta property="og:site_name" content="Wendy&#39;s Blog">
-<meta property="og:description" content="输入输出万能头：#include &lt;bits&#x2F;stdc++.h&gt;                1.%s 表示字符串。%c 表示字符。%lf 表示双精度浮点数 ( double )。%lld 表示长整型 ( long long )。  %llu 表示无符号长整型 ( unsigned long long )， 无符号整数不能读入负数             输入情况1：若干个">
+<meta property="og:description" content="输入输出万能头：#include &lt;bits&#x2F;stdc++.h&gt;                %s 表示字符串。%c 表示字符。%lf 表示双精度浮点数 ( double )。%lld 表示长整型 ( long long )。  %llu 表示无符号长整型 ( unsigned long long )， 无符号整数不能读入负数             输入情况1：若干个数字">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-10-05T06:19:04.000Z">
-<meta property="article:modified_time" content="2024-10-05T06:19:41.131Z">
+<meta property="article:modified_time" content="2024-10-06T17:07:27.738Z">
 <meta property="article:author" content="Zhiwen Huang">
 <meta name="twitter:card" content="summary_large_image">
   
@@ -222,7 +222,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          313 字
+          347 字
         
       </span>
     
@@ -275,9 +275,9 @@
             
               <div class="markdown-body">
                 
-                <h2 id="输入输出"><a href="#输入输出" class="headerlink" title="输入输出"></a>输入输出</h2><p>万能头：#include &lt;bits&#x2F;stdc++.h&gt;  </p>
+                <h2 id="输入输出"><a href="#输入输出" class="headerlink" title="输入输出"></a>输入输出</h2><p><strong>万能头：#include &lt;bits&#x2F;stdc++.h&gt;</strong>  </p>
 <div class="note note-success">
-            <p>1.%s 表示字符串。</p><ol start="2"><li>%c 表示字符。</li><li>%lf 表示双精度浮点数 ( double )。</li><li>%lld 表示长整型 ( long long )。  </li><li>%llu 表示无符号长整型 ( unsigned long long )， 无符号整数不能读<br>入负数</li></ol>
+            <ol><li><p>%s 表示字符串。</p></li><li><p>%c 表示字符。</p></li><li><p>%lf 表示双精度浮点数 ( double )。</p></li><li><p>%lld 表示长整型 ( long long )。  </p></li><li><p>%llu 表示无符号长整型 ( unsigned long long )， 无符号整数不能读<br>入负数</p></li></ol>
           </div>
 
 <p><strong>输入情况1</strong>：若干个数字，最后一个数字是 0</p>
@@ -299,6 +299,9 @@
 
 <p>遍历容器：</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-keyword">for</span> (vector&lt;<span class="hljs-type">int</span>&gt;::iterator it = myVector.<span class="hljs-built_in">begin</span>(); it != myVector.<span class="hljs-built_in">end</span>(); ++it) &#123;  <br>  cout &lt;&lt; *it &lt;&lt; endl;  <br>&#125;  <br><span class="hljs-comment">// 或者使用范围for循环  </span><br><span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> num : myVector) &#123;  <br>    cout &lt;&lt; num &lt;&lt; endl;  <br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h2 id="生成随机数"><a href="#生成随机数" class="headerlink" title="生成随机数"></a>生成随机数</h2><p>其中rand()能生成一个0到<code>RAND_MAX</code>（通常是32767）之间的随机数。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-type">int</span> min = <span class="hljs-number">1</span>;  <br><span class="hljs-type">int</span> max = <span class="hljs-number">100</span>;  <br><span class="hljs-type">int</span> range_random_number = min + <span class="hljs-built_in">rand</span>() % (max - min + <span class="hljs-number">1</span>);  <br></code></pre></td></tr></table></figure>
 
 
                 
