@@ -27,7 +27,7 @@
 <meta property="og:description" content="输入输出万能头：#include &lt;bits&#x2F;stdc++.h&gt;                %s 表示字符串。%c 表示字符。%lf 表示双精度浮点数 ( double )。%lld 表示长整型 ( long long )。  %llu 表示无符号长整型 ( unsigned long long )， 无符号整数不能读入负数             输入情况1：若干个数字">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-10-05T06:19:04.000Z">
-<meta property="article:modified_time" content="2024-10-06T17:07:27.738Z">
+<meta property="article:modified_time" content="2024-10-13T13:48:45.064Z">
 <meta property="article:author" content="Zhiwen Huang">
 <meta name="twitter:card" content="summary_large_image">
   
@@ -222,7 +222,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          347 字
+          426 字
         
       </span>
     
@@ -233,7 +233,7 @@
         
         
         
-          3 分钟
+          4 分钟
         
       </span>
     
@@ -295,10 +295,20 @@
 <p><em>数字转化为字符串</em></p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-type">int</span> n;<br>string t;<br>cin &gt;&gt; n;<br>t = <span class="hljs-built_in">to_string</span>(n);<br></code></pre></td></tr></table></figure>
 
+<p><strong>控制输出精度：</strong></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs c++">cout &lt;&lt; fixed &lt;&lt; <span class="hljs-built_in">setprecision</span>(<span class="hljs-number">9</span>) &lt;&lt; your_number &lt;&lt; endl;<br></code></pre></td></tr></table></figure>
+
+
+
 <h2 id="vector"><a href="#vector" class="headerlink" title="vector"></a>vector</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs c++">vector&lt;<span class="hljs-type">int</span>&gt; myVector = &#123;<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>&#125;;<br>myVector.<span class="hljs-built_in">push_back</span>(<span class="hljs-number">6</span>); <span class="hljs-comment">// 在vector末尾添加一个新的整数6</span><br>myVector.<span class="hljs-built_in">pop_back</span>(); <span class="hljs-comment">// 删除最后一个元素  </span><br>myVector.<span class="hljs-built_in">erase</span>(myVector.<span class="hljs-built_in">begin</span>() + <span class="hljs-number">1</span>); <span class="hljs-comment">// 删除第二个元素（基于0的索引）  </span><br>myVector.<span class="hljs-built_in">erase</span>(myVector.<span class="hljs-built_in">begin</span>(), myVector.<span class="hljs-built_in">begin</span>() + <span class="hljs-number">2</span>); <span class="hljs-comment">// 删除前两个元素</span><br><span class="hljs-type">size_t</span> vectorSize = myVector.<span class="hljs-built_in">size</span>();<br></code></pre></td></tr></table></figure>
 
 <p>遍历容器：</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-keyword">for</span> (vector&lt;<span class="hljs-type">int</span>&gt;::iterator it = myVector.<span class="hljs-built_in">begin</span>(); it != myVector.<span class="hljs-built_in">end</span>(); ++it) &#123;  <br>  cout &lt;&lt; *it &lt;&lt; endl;  <br>&#125;  <br><span class="hljs-comment">// 或者使用范围for循环  </span><br><span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> num : myVector) &#123;  <br>    cout &lt;&lt; num &lt;&lt; endl;  <br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p><strong>pair的使用</strong>：处理复数等成对数据：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs c++">vector&lt;pair&lt;<span class="hljs-type">double</span>,<span class="hljs-type">double</span>&gt;&gt;<span class="hljs-built_in">fushu</span>(n);<br><span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">0</span>;i&lt;n;i++)&#123;<br>cin&gt;&gt;modules[i].first&gt;&gt;modules[i].second;<br>&#125;<br><span class="hljs-comment">//double a = modules[i].first, b = modules[i].second;</span><br><span class="hljs-comment">//double c = modules[j].first, d = modules[j].second;</span><br></code></pre></td></tr></table></figure>
+
+
 
 <h2 id="生成随机数"><a href="#生成随机数" class="headerlink" title="生成随机数"></a>生成随机数</h2><p>其中rand()能生成一个0到<code>RAND_MAX</code>（通常是32767）之间的随机数。</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-type">int</span> min = <span class="hljs-number">1</span>;  <br><span class="hljs-type">int</span> max = <span class="hljs-number">100</span>;  <br><span class="hljs-type">int</span> range_random_number = min + <span class="hljs-built_in">rand</span>() % (max - min + <span class="hljs-number">1</span>);  <br></code></pre></td></tr></table></figure>
@@ -365,12 +375,18 @@
                   <article class="post-prev col-6">
                     
                     
+                      <a href="/2024/10/20/%E9%93%BE%E8%A1%A8/" title="链表">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">链表</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2024/09/16/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" title="动态规划">
-                        <span class="hidden-mobile">动态规划</span>
+                      <a href="/2024/09/16/%E6%98%93%E9%94%99%E7%82%B9/" title="易错点">
+                        <span class="hidden-mobile">易错点</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
