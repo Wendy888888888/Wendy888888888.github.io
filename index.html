@@ -237,7 +237,7 @@
       
       <a class="index-excerpt index-excerpt__noimg" href="/2024/10/26/%E6%A0%91/" target="_self">
         <div>
-          递归序遍历 先序遍历：遍历中第一次遇到每个结点时打印，之后再遇到不做操作 中								二 后								三 非递归遍历 先序 将头结点压栈 while（栈不空） ​	弹出结点cur ​	打印（处理）cur ​	先压cur右孩子再压cur左孩子 后序：要多用个收集栈逆序 while（栈不空）  中序  while(栈不空 || cur!&#x3D;nullptr）  （1）一直压入所有左节
+          常用写法： s1.push(current-&gt;right);current&#x3D;current-&gt;left递归递推要有循环意识，走一遍循环知道每个循环都对节点做的操作             递归序遍历 先序遍历：遍历中第一次遇到每个结点时打印，之后再遇到不做操作 中								二 后								三 非递归遍历 先序 将头结点压栈 if (!cu
         </div>
       </a>
 
@@ -270,7 +270,7 @@
       
       <a class="index-excerpt index-excerpt__noimg" href="/2024/10/20/%E9%93%BE%E8%A1%A8/" target="_self">
         <div>
-          哈希表哈希表都是常数级的查询 哈希map1234567891011121314151617int main()&#123;    unordered_map&lt;string, int&gt; myMap;  //键是string，key是int// 插入键值对myMap[&quot;apple&quot;] = 5;myMap[&quot;banana&quot;] = 3;myMap[&qu
+          检验回文链表需要用到的数据结构：链表、栈 注意理解层面：n1、n2、n3都是指针，是把指针指向的地址赋给等号左侧的指针。每个指针都指向了一个地址，没有更换前一个地址可由多个指针同时指向。 用栈（用额外空间） 1234567891011121314151617181920bool ishuiwenlink(listnode *head)&#123;    stack&lt;int&gt; s;
         </div>
       </a>
 

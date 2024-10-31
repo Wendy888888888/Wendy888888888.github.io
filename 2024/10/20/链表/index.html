@@ -19,18 +19,18 @@
   <meta name="author" content="Zhiwen Huang">
   <meta name="keywords" content="">
   
-    <meta name="description" content="哈希表哈希表都是常数级的查询 哈希map1234567891011121314151617int main()&#123;    unordered_map&lt;string, int&gt; myMap;  &#x2F;&#x2F;键是string，key是int&#x2F;&#x2F; 插入键值对myMap[&quot;apple&quot;] &#x3D; 5;myMap[&quot;banana&quot;] &#x3D; 3;myMap[&amp;qu">
+    <meta name="description" content="检验回文链表需要用到的数据结构：链表、栈 注意理解层面：n1、n2、n3都是指针，是把指针指向的地址赋给等号左侧的指针。每个指针都指向了一个地址，没有更换前一个地址可由多个指针同时指向。 用栈（用额外空间） 1234567891011121314151617181920bool ishuiwenlink(listnode *head)&#123;    stack&lt;int&gt; s;">
 <meta property="og:type" content="article">
 <meta property="og:title" content="链表">
 <meta property="og:url" content="http://example.com/2024/10/20/%E9%93%BE%E8%A1%A8/index.html">
 <meta property="og:site_name" content="Wendy&#39;s Blog">
-<meta property="og:description" content="哈希表哈希表都是常数级的查询 哈希map1234567891011121314151617int main()&#123;    unordered_map&lt;string, int&gt; myMap;  &#x2F;&#x2F;键是string，key是int&#x2F;&#x2F; 插入键值对myMap[&quot;apple&quot;] &#x3D; 5;myMap[&quot;banana&quot;] &#x3D; 3;myMap[&amp;qu">
+<meta property="og:description" content="检验回文链表需要用到的数据结构：链表、栈 注意理解层面：n1、n2、n3都是指针，是把指针指向的地址赋给等号左侧的指针。每个指针都指向了一个地址，没有更换前一个地址可由多个指针同时指向。 用栈（用额外空间） 1234567891011121314151617181920bool ishuiwenlink(listnode *head)&#123;    stack&lt;int&gt; s;">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://raw.githubusercontent.com/Wendy888888888/image/main/1729910280345.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/Wendy888888888/image/main/1729909836333.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/Wendy888888888/image/main/0N">
 <meta property="article:published_time" content="2024-10-20T06:53:03.000Z">
-<meta property="article:modified_time" content="2024-10-26T13:54:13.559Z">
+<meta property="article:modified_time" content="2024-10-30T10:03:57.430Z">
 <meta property="article:author" content="Zhiwen Huang">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://raw.githubusercontent.com/Wendy888888888/image/main/1729910280345.png">
@@ -226,7 +226,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.5k 字
+          1.2k 字
         
       </span>
     
@@ -237,7 +237,7 @@
         
         
         
-          13 分钟
+          11 分钟
         
       </span>
     
@@ -279,18 +279,7 @@
             
               <div class="markdown-body">
                 
-                <h2 id="哈希表"><a href="#哈希表" class="headerlink" title="哈希表"></a>哈希表</h2><p>哈希表都是常数级的查询</p>
-<h3 id="哈希map"><a href="#哈希map" class="headerlink" title="哈希map"></a>哈希map</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span>&#123;<br>    unordered_map&lt;string, <span class="hljs-type">int</span>&gt; myMap;  <span class="hljs-comment">//键是string，key是int</span><br><span class="hljs-comment">// 插入键值对</span><br>myMap[<span class="hljs-string">&quot;apple&quot;</span>] = <span class="hljs-number">5</span>;<br>myMap[<span class="hljs-string">&quot;banana&quot;</span>] = <span class="hljs-number">3</span>;<br>myMap[<span class="hljs-string">&quot;orange&quot;</span>] = <span class="hljs-number">7</span>;<br><span class="hljs-comment">//访问值</span><br>cout&lt;&lt;myMap[<span class="hljs-string">&quot;apple&quot;</span>]&lt;&lt;endl;<br><span class="hljs-comment">//删除</span><br>myMap.<span class="hljs-built_in">erase</span>(<span class="hljs-string">&quot;banana&quot;</span>);<br><span class="hljs-comment">//遍历</span><br><span class="hljs-keyword">for</span>(<span class="hljs-type">const</span> <span class="hljs-keyword">auto</span>&amp;pair:myMap)&#123;<br>    cout&lt;&lt;pair.first&lt;&lt;endl;<br>    cout&lt;&lt;pair.second&lt;&lt;endl;<br>&#125;<br>&#125;<br><br></code></pre></td></tr></table></figure>
-
-<p>哈希表通常用键取值，不像pair对里面用<strong>数组索引</strong>查询成对值，如下：</p>
-<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs scss">vector&lt;pair&lt;double,double&gt;&gt;<span class="hljs-built_in">fushu</span>(n);<br><span class="hljs-built_in">for</span>(int i=<span class="hljs-number">0</span>;i&lt;n;i++)&#123;<br>cin&gt;&gt;modules<span class="hljs-selector-attr">[i]</span><span class="hljs-selector-class">.first</span>&gt;&gt;modules<span class="hljs-selector-attr">[i]</span><span class="hljs-selector-class">.second</span>;<br>&#125;<br><span class="hljs-comment">//double a = modules[i].first, b = modules[i].second;</span><br><span class="hljs-comment">//double c = modules[j].first, d = modules[j].second;</span><br></code></pre></td></tr></table></figure>
-
-<h3 id="哈希set"><a href="#哈希set" class="headerlink" title="哈希set"></a>哈希set</h3><p>set无重复元素，也没有数组一样的索引，但是能用迭代器遍历所有元素</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span>&#123;<br>    unordered_set&lt;<span class="hljs-type">int</span>&gt;myset;<span class="hljs-comment">//不含重复元素</span><br>    myset.<span class="hljs-built_in">insert</span>(<span class="hljs-number">6</span>);<br>    myset.<span class="hljs-built_in">insert</span>(<span class="hljs-number">9</span>);<br>    <span class="hljs-keyword">if</span>(myset.<span class="hljs-built_in">count</span>(<span class="hljs-number">6</span>))&#123;cout&lt;&lt;<span class="hljs-string">&quot;元素存在&quot;</span>&lt;&lt;endl;&#125;<br><br>    myset.<span class="hljs-built_in">erase</span>(<span class="hljs-number">6</span>);<br>    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> elem:myset)&#123;<br>        cout&lt;&lt;elem&lt;&lt;endl;<br><br>    &#125;<br>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br><br></code></pre></td></tr></table></figure>
-
-
-
-<h2 id="检验回文链表"><a href="#检验回文链表" class="headerlink" title="检验回文链表"></a>检验回文链表</h2><p>需要用到的数据结构：链表、栈</p>
+                <h2 id="检验回文链表"><a href="#检验回文链表" class="headerlink" title="检验回文链表"></a>检验回文链表</h2><p>需要用到的数据结构：链表、栈</p>
 <p>注意理解层面：n1、n2、n3都是指针，是把指针指向的地址赋给等号左侧的指针。每个指针都指向了一个地址，没有更换前一个地址可由多个指针同时指向。</p>
 <p><strong>用栈</strong>（用额外空间）</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-function"><span class="hljs-type">bool</span> <span class="hljs-title">ishuiwenlink</span><span class="hljs-params">(listnode *head)</span></span>&#123;<br>    stack&lt;<span class="hljs-type">int</span>&gt; s;<br>    listnode *p;<br>    p=head;<br>    <span class="hljs-keyword">while</span>(p)&#123;<br>        s.<span class="hljs-built_in">push</span>(p-&gt;var);<br>        p=p-&gt;next;<br>    &#125;<br>    p=head;<br>    <span class="hljs-keyword">while</span>(p &amp;&amp;!s.<span class="hljs-built_in">empty</span>()) &#123;<br><br>         <span class="hljs-keyword">if</span>(s.<span class="hljs-built_in">top</span>()!=p-&gt;var)&#123;<br>            <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;<br>         &#125;<br>         p=p-&gt;next;<br>         s.<span class="hljs-built_in">pop</span>();<br>    &#125;<br>    <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;<br>&#125;<br><br></code></pre></td></tr></table></figure>
