@@ -39,7 +39,7 @@
 <meta property="og:image" content="https://raw.githubusercontent.com/Wendy888888888/image/main/1730432560748.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/Wendy888888888/image/main/1730451258678.png">
 <meta property="article:published_time" content="2024-10-26T03:29:44.000Z">
-<meta property="article:modified_time" content="2024-11-01T09:33:58.005Z">
+<meta property="article:modified_time" content="2024-11-01T10:56:06.128Z">
 <meta property="article:author" content="Zhiwen Huang">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://raw.githubusercontent.com/Wendy888888888/image/main/332f8da6a4fc6095b4ff90d2e6ca20b.png">
@@ -339,7 +339,7 @@
 <p>代码循环体走一遍就能看出 父节点（上一次循环）是不双全节点的节点居然还有孩子（不是叶节点） return false；</p>
 <p><img src="https://raw.githubusercontent.com/Wendy888888888/image/main/1730122036118.png" srcset="/img/loading.gif" lazyload alt="1730122036118"></p>
 <h3 id="二叉树的序列化和反序列化"><a href="#二叉树的序列化和反序列化" class="headerlink" title="二叉树的序列化和反序列化"></a>二叉树的序列化和反序列化</h3><p><img src="https://raw.githubusercontent.com/Wendy888888888/image/main/1730452687591.png" srcset="/img/loading.gif" lazyload alt="先序序列化和反序列化"></p>
-<h2 id="最近公共祖先"><a href="#最近公共祖先" class="headerlink" title="最近公共祖先"></a>最近公共祖先</h2><h2 id="二叉树递归结构套路"><a href="#二叉树递归结构套路" class="headerlink" title="二叉树递归结构套路"></a>二叉树递归结构套路</h2><div class="note note-success">
+<h2 id="二叉树递归结构套路"><a href="#二叉树递归结构套路" class="headerlink" title="二叉树递归结构套路"></a>二叉树递归结构套路</h2><div class="note note-success">
             <p>此套路不适用于所有二叉树题目</p><p>书写代码逻辑：</p><p>1、返回值struct</p><p>2、process: 返回值1&#x3D;process(左子树)；</p><p>​                       返回值2&#x3D;process(右子树)；</p><p>​					   递归返回的每个信息的求得</p><p>​					   主函数的所有要求</p><p>​						return 本轮返回值</p>
           </div>
 
@@ -361,7 +361,7 @@
 <p>满足1&lt;&lt;data.height-1(2的height-1次方)</p>
 <p><strong>递归返回信息</strong>:高度 节点数</p>
 <p><img src="https://raw.githubusercontent.com/Wendy888888888/image/main/2fa36cef5c2d584dd9626949f27a663.png" srcset="/img/loading.gif" lazyload alt="Full完全二叉树"></p>
-<p>一边从o1往父节点延伸（直到到达根节点），一边存入set。再从o2往父节点延伸，看看也没有set里的值</p>
+<h2 id="最近公共祖先"><a href="#最近公共祖先" class="headerlink" title="最近公共祖先"></a>最近公共祖先</h2><p>一边从o1往父节点延伸（直到到达根节点），一边存入set。再从o2往父节点延伸，看看也没有set里的值</p>
 <p><img src="https://raw.githubusercontent.com/Wendy888888888/image/main/1730432560748.png" srcset="/img/loading.gif" lazyload></p>
 <p>进递归是从根节点到叶节点一层层深入，然后一层层出递归的时候从叶节点往根节点上返。</p>
 <h2 id="后继节点"><a href="#后继节点" class="headerlink" title="后继节点"></a>后继节点</h2><p>x有右子树的时候 右子树的最左边节点</p>
