@@ -32,11 +32,14 @@
 <meta property="og:image" content="https://raw.githubusercontent.com/Wendy888888888/image/main/1730121023906.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/Wendy888888888/image/main/1730121415986.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/Wendy888888888/image/main/1730122036118.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/Wendy888888888/image/main/1730452687591.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/Wendy888888888/image/main/e84e53b289a942637d365a9e0763376.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/Wendy888888888/image/main/9a1ea1b81800a4680e09548f43a216f.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/Wendy888888888/image/main/2fa36cef5c2d584dd9626949f27a663.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/Wendy888888888/image/main/1730432560748.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/Wendy888888888/image/main/1730451258678.png">
 <meta property="article:published_time" content="2024-10-26T03:29:44.000Z">
-<meta property="article:modified_time" content="2024-10-31T17:46:13.631Z">
+<meta property="article:modified_time" content="2024-11-01T09:33:58.005Z">
 <meta property="article:author" content="Zhiwen Huang">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://raw.githubusercontent.com/Wendy888888888/image/main/332f8da6a4fc6095b4ff90d2e6ca20b.png">
@@ -232,7 +235,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          687 字
+          854 字
         
       </span>
     
@@ -243,7 +246,7 @@
         
         
         
-          6 分钟
+          8 分钟
         
       </span>
     
@@ -324,31 +327,33 @@
 <p>每层结点数累计 </p>
 <p>层数累计）</p>
 <p><img src="https://raw.githubusercontent.com/Wendy888888888/image/main/1730013541783.png" srcset="/img/loading.gif" lazyload alt="1730013541783"></p>
-<h2 id="判断一棵树是否是搜索二叉树"><a href="#判断一棵树是否是搜索二叉树" class="headerlink" title="判断一棵树是否是搜索二叉树"></a>判断一棵树是否是搜索二叉树</h2><p>（中序遍历后数值从小到大）</p>
+<h2 id="遍历应用"><a href="#遍历应用" class="headerlink" title="遍历应用"></a>遍历应用</h2><p><strong>ps：在遍历程序里稍作改造</strong></p>
+<h3 id="判断一棵树是否是搜索二叉树"><a href="#判断一棵树是否是搜索二叉树" class="headerlink" title="判断一棵树是否是搜索二叉树"></a>判断一棵树是否是搜索二叉树</h3><p>（中序遍历后数值从小到大）</p>
 <p>法1 注意递归思想：其实每个结点都跟PreValue比较更新了</p>
-<p><img src="https://raw.githubusercontent.com/Wendy888888888/image/main/1730121023906.png" srcset="/img/loading.gif" lazyload alt="1730121023906"></p>
+<p><img src="https://raw.githubusercontent.com/Wendy888888888/image/main/1730121023906.png" srcset="/img/loading.gif" lazyload></p>
 <p>法2 中序非递归 </p>
 <p><img src="https://raw.githubusercontent.com/Wendy888888888/image/main/1730121415986.png" srcset="/img/loading.gif" lazyload alt="1730121415986"></p>
-<h2 id="判断一棵树是否为完全二叉树"><a href="#判断一棵树是否为完全二叉树" class="headerlink" title="判断一棵树是否为完全二叉树"></a>判断一棵树是否为完全二叉树</h2><p>宽度遍历</p>
+<h3 id="判断一棵树是否为完全二叉树"><a href="#判断一棵树是否为完全二叉树" class="headerlink" title="判断一棵树是否为完全二叉树"></a>判断一棵树是否为完全二叉树</h3><p>宽度遍历</p>
 <p>标准：1）任一节点有右孩子无左孩子 false</p>
 <p>​			2）如果遇到了第一个左右孩子不全  ，后续皆叶子节点</p>
 <p>代码循环体走一遍就能看出 父节点（上一次循环）是不双全节点的节点居然还有孩子（不是叶节点） return false；</p>
 <p><img src="https://raw.githubusercontent.com/Wendy888888888/image/main/1730122036118.png" srcset="/img/loading.gif" lazyload alt="1730122036118"></p>
-<h2 id="二叉树递归结构套路"><a href="#二叉树递归结构套路" class="headerlink" title="二叉树递归结构套路"></a>二叉树递归结构套路</h2><div class="note note-success">
-            <p>书写代码逻辑：</p><p>1、返回值struct</p><p>2、process: 返回值1&#x3D;process(左子树)；</p><p>​                       返回值2&#x3D;process(右子树)；</p><p>​					   递归返回的每个信息的求得</p><p>​					   主函数的所有要求</p><p>​						return 本轮返回值</p>
+<h3 id="二叉树的序列化和反序列化"><a href="#二叉树的序列化和反序列化" class="headerlink" title="二叉树的序列化和反序列化"></a>二叉树的序列化和反序列化</h3><p><img src="https://raw.githubusercontent.com/Wendy888888888/image/main/1730452687591.png" srcset="/img/loading.gif" lazyload alt="先序序列化和反序列化"></p>
+<h2 id="最近公共祖先"><a href="#最近公共祖先" class="headerlink" title="最近公共祖先"></a>最近公共祖先</h2><h2 id="二叉树递归结构套路"><a href="#二叉树递归结构套路" class="headerlink" title="二叉树递归结构套路"></a>二叉树递归结构套路</h2><div class="note note-success">
+            <p>此套路不适用于所有二叉树题目</p><p>书写代码逻辑：</p><p>1、返回值struct</p><p>2、process: 返回值1&#x3D;process(左子树)；</p><p>​                       返回值2&#x3D;process(右子树)；</p><p>​					   递归返回的每个信息的求得</p><p>​					   主函数的所有要求</p><p>​						return 本轮返回值</p>
           </div>
 
 <h3 id="例1-判断是否是平衡二叉树"><a href="#例1-判断是否是平衡二叉树" class="headerlink" title="例1 判断是否是平衡二叉树"></a>例1 判断是否是平衡二叉树</h3><p><strong>主函数要求：</strong></p>
 <p>左子树 是平</p>
 <p>右子树 是平</p>
 <p>|左树高度-右树高度|&lt;2</p>
-<p><strong>递归返回信息</strong>：左子树右子树都需要 ：是否平衡 高度多少</p>
+<p><strong>递归返回信息</strong>：（左子树右子树都需要）是否平衡 高度多少</p>
 <p><img src="https://raw.githubusercontent.com/Wendy888888888/image/main/e84e53b289a942637d365a9e0763376.png" srcset="/img/loading.gif" lazyload alt="平衡balanced"></p>
 <h3 id="例2-判断是否是搜索二叉树"><a href="#例2-判断是否是搜索二叉树" class="headerlink" title="例2 判断是否是搜索二叉树"></a>例2 判断是否是搜索二叉树</h3><p><strong>主函数要求：</strong></p>
 <p>左子树 是BST</p>
 <p>右子树 是BST</p>
 <p>左子树max&lt;current&lt;右子树min</p>
-<p><strong>递归返回信息：</strong>左子树右子树都需要：是否是BST，min，max</p>
+<p><strong>递归返回信息：</strong>（左子树右子树都需要）是否是BST，min，max</p>
 <p><img src="https://raw.githubusercontent.com/Wendy888888888/image/main/9a1ea1b81800a4680e09548f43a216f.png" srcset="/img/loading.gif" lazyload alt="BST搜索"></p>
 <h3 id="例3-判断是否是完全二叉树"><a href="#例3-判断是否是完全二叉树" class="headerlink" title="例3 判断是否是完全二叉树"></a>例3 判断是否是完全二叉树</h3><p><strong>主函数要求</strong>：</p>
 <p>左子树是F</p>
@@ -356,8 +361,13 @@
 <p>满足1&lt;&lt;data.height-1(2的height-1次方)</p>
 <p><strong>递归返回信息</strong>:高度 节点数</p>
 <p><img src="https://raw.githubusercontent.com/Wendy888888888/image/main/2fa36cef5c2d584dd9626949f27a663.png" srcset="/img/loading.gif" lazyload alt="Full完全二叉树"></p>
-<h2 id="最近公共祖先"><a href="#最近公共祖先" class="headerlink" title="最近公共祖先"></a>最近公共祖先</h2><p>情况1：o1是o2的LCA,或o2是o1的LCA</p>
-<p>情况2：不互为LCA，得向上找</p>
+<p>一边从o1往父节点延伸（直到到达根节点），一边存入set。再从o2往父节点延伸，看看也没有set里的值</p>
+<p><img src="https://raw.githubusercontent.com/Wendy888888888/image/main/1730432560748.png" srcset="/img/loading.gif" lazyload></p>
+<p>进递归是从根节点到叶节点一层层深入，然后一层层出递归的时候从叶节点往根节点上返。</p>
+<h2 id="后继节点"><a href="#后继节点" class="headerlink" title="后继节点"></a>后继节点</h2><p>x有右子树的时候 右子树的最左边节点</p>
+<p>x无右子树的时候 a.一路往上找，当节点是他父节点的左孩子时，父节点就是x的后继节点</p>
+<p>​                              b.x是整棵树的最右节点 </p>
+<p><img src="https://raw.githubusercontent.com/Wendy888888888/image/main/1730451258678.png" srcset="/img/loading.gif" lazyload></p>
 
                 
               </div>
@@ -419,6 +429,12 @@
                 <div class="post-prevnext my-3">
                   <article class="post-prev col-6">
                     
+                    
+                      <a href="/2024/11/01/%E5%9B%BE/" title="图">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">图</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
                     
                   </article>
                   <article class="post-next col-6">

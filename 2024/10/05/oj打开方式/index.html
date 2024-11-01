@@ -27,7 +27,7 @@
 <meta property="og:description" content="输入输出万能头：#include &lt;bits&#x2F;stdc++.h&gt;                %s 表示字符串。%c 表示字符。%lf 表示双精度浮点数 ( double )。%lld 表示长整型 ( long long )。  %llu 表示无符号长整型 ( unsigned long long )， 无符号整数不能读入负数  return 的巧妙放置可以自如切断程序">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-10-05T06:19:04.000Z">
-<meta property="article:modified_time" content="2024-10-30T10:10:16.913Z">
+<meta property="article:modified_time" content="2024-11-01T06:30:12.403Z">
 <meta property="article:author" content="Zhiwen Huang">
 <meta name="twitter:card" content="summary_large_image">
   
@@ -222,7 +222,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          842 字
+          966 字
         
       </span>
     
@@ -233,7 +233,7 @@
         
         
         
-          8 分钟
+          9 分钟
         
       </span>
     
@@ -328,6 +328,11 @@
 
 <h3 id="哈希set"><a href="#哈希set" class="headerlink" title="哈希set"></a>哈希set</h3><p>set无重复元素，也没有数组一样的索引，但是能用迭代器遍历所有元素</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span>&#123;<br>    unordered_set&lt;<span class="hljs-type">int</span>&gt;myset;<span class="hljs-comment">//不含重复元素</span><br>    myset.<span class="hljs-built_in">insert</span>(<span class="hljs-number">6</span>);<br>    myset.<span class="hljs-built_in">insert</span>(<span class="hljs-number">9</span>);<br>    <span class="hljs-keyword">if</span>(myset.<span class="hljs-built_in">count</span>(<span class="hljs-number">6</span>))&#123;cout&lt;&lt;<span class="hljs-string">&quot;元素存在&quot;</span>&lt;&lt;endl;&#125;<br><br>    myset.<span class="hljs-built_in">erase</span>(<span class="hljs-number">6</span>);<br>    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> elem:myset)&#123;<br>        cout&lt;&lt;elem&lt;&lt;endl;<br><br>    &#125;<br>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br><br></code></pre></td></tr></table></figure>
+
+<p>当你使用 insert 方法向 set 中插入一个元素时，insert 方法会返回一个pair，其中：</p>
+<p>first 是一个指向 set 中插入位置（或等效位置，如果元素已存在）的迭代器。<br>second 是一个布尔值，指示插入是否成功。如果元素已存在于 set 中，second 将为 false；否则，second 将为 true。</p>
+<p>例如：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-keyword">auto</span> result = mySet.<span class="hljs-built_in">insert</span>(<span class="hljs-number">5</span>);  <br>   <span class="hljs-keyword">if</span> (result.second) &#123;  <br>       std::cout &lt;&lt; <span class="hljs-string">&quot;Insertion successful, value 5 added.&quot;</span> &lt;&lt; std::endl;  <br>   &#125; <span class="hljs-keyword">else</span> &#123;  <br>       std::cout &lt;&lt; <span class="hljs-string">&quot;Insertion failed, value 5 already exists.&quot;</span> &lt;&lt; std::endl;  <br>   &#125;  <br> <br></code></pre></td></tr></table></figure>
 
 
                 
