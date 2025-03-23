@@ -30,7 +30,7 @@
 <meta property="og:image" content="https://raw.githubusercontent.com/Wendy888888888/image/main/1729909836333.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/Wendy888888888/image/main/0N">
 <meta property="article:published_time" content="2024-10-20T06:53:03.000Z">
-<meta property="article:modified_time" content="2024-10-30T10:03:57.430Z">
+<meta property="article:modified_time" content="2025-03-03T12:04:31.290Z">
 <meta property="article:author" content="Zhiwen Huang">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://raw.githubusercontent.com/Wendy888888888/image/main/1729910280345.png">
@@ -299,7 +299,7 @@
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-function">listnode * <span class="hljs-title">reverselink</span><span class="hljs-params">( listnode *head)</span></span>&#123;<br>	<span class="hljs-comment">//初始化自己，前，后</span><br>    listnode *prev=<span class="hljs-literal">nullptr</span>;<br>    listnode *current;<br>    listnode *nextnode;<br>    current=head;<br>    <span class="hljs-comment">//循环体内：找到下一个结点，反连到前结点，自己赋给前，后赋给自己</span><br>    <span class="hljs-keyword">while</span>(current)&#123;<br>        nextnode=current-&gt;next;<br>        current-&gt;next=prev;<br>        prev=current;<br>        current=nextnode;<span class="hljs-comment">//转向原链表的下一个node</span><br>    &#125;<br>    <span class="hljs-comment">//出循环返回前指针</span><br>    <span class="hljs-keyword">return</span> prev;<br>&#125;<br><br></code></pre></td></tr></table></figure>
 
 <div class="note note-success">
-            <p><strong>注意</strong>调用此函数的时候必须是：</p><p>printlist(reverselink(a));</p><p>因为他返回的是反转后链表的首结点，也是原链表的尾结点，reverselink(a)并没有改变指针a的地址</p><p>如果用printlist(a)；那就只剩一个结点可输出。</p>
+            <p><strong>注意</strong>调用此函数的时候必须是：</p><p>printlist(reverselink(a));</p><p>因为他返回的是反转后链表的首结点，也是原链表的尾结点。</p><p>如果用printlist(a)；那就只剩一个结点可输出。</p>
           </div>
 
 

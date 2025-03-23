@@ -19,26 +19,21 @@
   <meta name="author" content="Zhiwen Huang">
   <meta name="keywords" content="">
   
-    <meta name="description" content="用标签块要用纯文本 不能放在代码框里 行内标签： text  便签：              文字 或者 markdown 均可             语法易错点：1.数组溢出，注意循环的&lt;&#x3D; 或者&lt;分界 2.if比较语句&#x3D;&#x3D;写成赋值语句&#x3D; 3.涉及到double运算的时候别习惯性写成int 4.char是单引号  int i&#x3D;st">
+    <meta name="description" content="回溯">
 <meta property="og:type" content="article">
-<meta property="og:title" content="易错点">
-<meta property="og:url" content="http://example.com/2024/09/16/%E6%98%93%E9%94%99%E7%82%B9/index.html">
+<meta property="og:title" content="hot100经典">
+<meta property="og:url" content="http://example.com/2025/03/24/hot100%E7%BB%8F%E5%85%B8/index.html">
 <meta property="og:site_name" content="Wendy&#39;s Blog">
-<meta property="og:description" content="用标签块要用纯文本 不能放在代码框里 行内标签： text  便签：              文字 或者 markdown 均可             语法易错点：1.数组溢出，注意循环的&lt;&#x3D; 或者&lt;分界 2.if比较语句&#x3D;&#x3D;写成赋值语句&#x3D; 3.涉及到double运算的时候别习惯性写成int 4.char是单引号  int i&#x3D;st">
+<meta property="og:description" content="回溯">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://raw.githubusercontent.com/Wendy888888888/image/main/image-20250305204635875.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/Wendy888888888/image/main/image-20250305204549129.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/Wendy888888888/image/main/image-20250306153408712.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/Wendy888888888/image/main/9P%24%243K5F2OUTIX9GWY%7DE13N.png">
-<meta property="article:published_time" content="2024-09-16T09:47:23.000Z">
-<meta property="article:modified_time" content="2025-03-08T04:47:55.862Z">
+<meta property="article:published_time" content="2025-03-23T17:03:46.000Z">
+<meta property="article:modified_time" content="2025-03-23T17:04:46.622Z">
 <meta property="article:author" content="Zhiwen Huang">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://raw.githubusercontent.com/Wendy888888888/image/main/image-20250305204635875.png">
   
   
   
-  <title>易错点 - Wendy&#39;s Blog</title>
+  <title>hot100经典 - Wendy&#39;s Blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -204,7 +199,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="易错点"></span>
+            <span id="subtitle" data-typed-text="hot100经典"></span>
           
         </div>
 
@@ -215,8 +210,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-09-16 17:47" pubdate>
-          2024年9月16日 下午
+        <time datetime="2025-03-24 01:03" pubdate>
+          2025年3月24日 凌晨
         </time>
       </span>
     
@@ -227,7 +222,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          329 字
+          2 字
         
       </span>
     
@@ -238,7 +233,7 @@
         
         
         
-          3 分钟
+          1 分钟
         
       </span>
     
@@ -275,47 +270,12 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">易错点</h1>
+            <h1 id="seo-header">hot100经典</h1>
             
             
               <div class="markdown-body">
                 
-                <p>用标签块要用纯文本 不能放在代码框里</p>
-<p>行内标签：</p>
-<span class="label label-primary">text</span>
-
-<p>便签：</p>
-<div class="note note-success">
-            <p>文字 或者 <code>markdown</code> 均可</p>
-          </div>
-
-<h2 id="语法易错点："><a href="#语法易错点：" class="headerlink" title="语法易错点："></a>语法易错点：</h2><p>1.数组溢出，注意循环的&lt;&#x3D; 或者&lt;分界</p>
-<p>2.if比较语句&#x3D;&#x3D;写成赋值语句&#x3D;</p>
-<p>3.涉及到double运算的时候别习惯性写成int</p>
-<p>4.char是单引号  int i&#x3D;stoi（string)</p>
-<p>​						    int i&#x3D;char-‘0’;</p>
-<p>5.靠乘方的循环次数能用乘方表示就不要用移位</p>
-<p>例：</p>
-<p>出错版：</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-keyword">for</span>(k=<span class="hljs-number">1</span>;num&gt;((<span class="hljs-number">1</span>&lt;&lt;k)<span class="hljs-number">-1</span>);k++)&#123;&#125;<br>   k=k<span class="hljs-number">-1</span>;<br>   <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">1</span>;i&lt;=k;i++)&#123;...&#125;<br></code></pre></td></tr></table></figure>
-
-<p>正确版：</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> step=<span class="hljs-number">1</span>;step&lt;num;step*=<span class="hljs-number">2</span>)&#123;...&#125;<br></code></pre></td></tr></table></figure>
-
-<p>6.需要迭代的时候及时把if变成while：</p>
-<p><img src="https://raw.githubusercontent.com/Wendy888888888/image/main/image-20250305204635875.png" srcset="/img/loading.gif" lazyload alt="image-20250305204635875"></p>
-<p><img src="https://raw.githubusercontent.com/Wendy888888888/image/main/image-20250305204549129.png" srcset="/img/loading.gif" lazyload alt="题目"></p>
-<p>7.遍历方法</p>
-<p>无条件遍历：循环</p>
-<p>有条件遍历：自增自减+条件约束</p>
-<p>8.背包问题</p>
-<p><img src="https://raw.githubusercontent.com/Wendy888888888/image/main/image-20250306153408712.png" srcset="/img/loading.gif" lazyload alt="image-20250306153408712"></p>
-<p>其中选定物品i容量就被挤占，不选i可能容量够装别的物品，所以两者价值高低未知</p>
-<p>9.回溯之 子集  VS 全排列</p>
-<p><strong>那么既然是无序，取过的元素不会重复取，写回溯算法的时候，for就要从startIndex开始，而不是从0开始！</strong></p>
-<p>回溯法递归的过程中，就那一个path，一个result,(一个used) 因此在dfs()里这些变量可传参可不传参（放于全局变量）：</p>
-<p><img src="https://raw.githubusercontent.com/Wendy888888888/image/main/9P%24%243K5F2OUTIX9GWY%7DE13N.png" srcset="/img/loading.gif" lazyload alt="全排列"></p>
-
+                <h2 id="回溯"><a href="#回溯" class="headerlink" title="回溯"></a>回溯</h2>
                 
               </div>
             
@@ -332,8 +292,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>易错点</div>
-      <div>http://example.com/2024/09/16/易错点/</div>
+      <div>hot100经典</div>
+      <div>http://example.com/2025/03/24/hot100经典/</div>
     </div>
     <div class="license-meta">
       
@@ -345,7 +305,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2024年9月16日</div>
+          <div>2025年3月24日</div>
         </div>
       
       
@@ -377,18 +337,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2024/10/05/oj%E6%89%93%E5%BC%80%E6%96%B9%E5%BC%8F/" title="oj打开方式">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">oj打开方式</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2024/09/15/%E6%8E%92%E5%BA%8F/" title="排序">
-                        <span class="hidden-mobile">排序</span>
+                      <a href="/2024/11/01/%E8%B4%AA%E5%BF%83/" title="贪心">
+                        <span class="hidden-mobile">贪心</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
